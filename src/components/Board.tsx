@@ -1,29 +1,12 @@
 import styles from "./Board.module.css";
 
-import { Card, ECardColor, ICard, IWord } from "./Card";
+import _ from "lodash";
 
-const baseWords = [
-  "Faca",
-  "Maçã",
-  "Pão",
-  "Ovelha",
-  "Faca",
-  "Maçã",
-  "Pão",
-  "Ovelha",
-  "Faca",
-  "Maçã",
-  "Pão",
-  "Ovelha",
-  "Faca",
-  "Maçã",
-  "Pão",
-  "Ovelha",
-  "Faca",
-  "Maçã",
-  "Pão",
-  "Ovelha",
-];
+import { Card, ECardColor, IWord } from "./Card";
+
+import wordlist from "../resource/wordlist.json";
+
+const baseWords = _.sampleSize(wordlist, 25);
 
 export function Board() {
   const cards: IWord[] = baseWords.map((word) => {
@@ -31,7 +14,6 @@ export function Board() {
 
     return {
       word,
-      color: ECardColor.GRAY,
       teamColor:
         availableColors[Math.floor(Math.random() * availableColors.length)],
     };
