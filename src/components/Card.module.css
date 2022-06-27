@@ -1,6 +1,6 @@
 .wrapper {
-  width: 12vw;
-  height: 12vh;
+  width: 11vw;
+  height: 11vh;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -47,4 +47,5 @@
   text-transform: uppercase;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-size: 1.2vw;
 }
