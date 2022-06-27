@@ -1,9 +1,11 @@
-.wrapper {
+.layout {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wrapper {
+  display: grid;
+  grid-row: 1fr;
 }
