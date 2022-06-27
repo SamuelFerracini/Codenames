@@ -1,5 +1,13 @@
+import styles from "./App.module.css";
+
+import { Board } from "./components/Board";
+
 function App() {
-  return <h1>Hello world</h1>;
+  return (
+    <div className={styles.wrapper}>
+      <Board />
+    </div>
+  );
 }
 
 export default App;
